@@ -29,5 +29,6 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "extends": "@ignite-ui/ts-config/react.json",
 }
