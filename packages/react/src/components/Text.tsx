@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react'
 import { styled } from '../styles'
 
-export const Text = styled('h2', {
+export const Text = styled('p', {
   fontFamily: '$default',
   lineHeight: '$base',
   color: '$gray100',
