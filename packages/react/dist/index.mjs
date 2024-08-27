@@ -120,33 +120,42 @@ var {
   }
 });
 
-// src/index.tsx
-var Button = styled("button", {
-  fontFamily: "$default",
-  backgroundColor: "$ignite500",
+// src/components/Box.tsx
+var Box = styled("div", {
+  padding: "$4",
   borderRadius: "$md",
-  color: "$white",
-  outline: "none",
-  border: "none",
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
+});
+
+// src/components/Text.tsx
+var Text = styled("h2", {
+  fontFamily: "$default",
+  lineHeight: "$base",
+  color: "$gray100",
+  margin: 0,
   variants: {
     size: {
-      small: {
-        fontSize: 14,
-        padding: "$2 $4"
-      },
-      big: {
-        fontSize: 16,
-        padding: "$3 $6"
-      }
+      xxs: { fontSize: "$xxs" },
+      xs: { fontSize: "$xs" },
+      sm: { fontSize: "$sm" },
+      md: { fontSize: "$md" },
+      lg: { fontSize: "$lg" },
+      xl: { fontSize: "$xl" },
+      "4xl": { fontSize: "$2xl" },
+      "5xl": { fontSize: "$4xl" },
+      "6xl": { fontSize: "$5xl" },
+      "7xl": { fontSize: "$6xl" },
+      "8xl": { fontSize: "$7xl" },
+      "9xl": { fontSize: "$8xl" },
+      "2xl": { fontSize: "$9xl" }
     }
   },
   defaultVariants: {
-    size: "small"
-  },
-  "&:hover": {
-    opacity: 0.7
+    size: "md"
   }
 });
 export {
-  Button
+  Box,
+  Text
 };
