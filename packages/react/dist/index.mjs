@@ -441,12 +441,51 @@ import { jsx as jsx3 } from "react/jsx-runtime";
 function Checkbox2() {
   return /* @__PURE__ */ jsx3(CheckboxContainer, { children: /* @__PURE__ */ jsx3(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) });
 }
+
+// src/components/MultiSteps/styles.ts
+var MultiStepsContainer = styled("div", {});
+var Label = styled(Text, {
+  color: "$gray100",
+  defaultVariants: {
+    size: "xs"
+  }
+});
+var Steps = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "repeat(var(--steps-size), 1fr)",
+  gap: "$2",
+  marginTop: "$1"
+});
+var Step = styled("div", {
+  height: "$1",
+  borderRadius: "$px",
+  backgroundColor: "$gray600",
+  variants: {
+    active: {
+      true: {
+        backgroundColor: "$gray100"
+      }
+    }
+  }
+});
+
+// src/components/MultiSteps/index.tsx
+import { jsx as jsx4, jsxs as jsxs3 } from "react/jsx-runtime";
+function MultiSteps({ size, currentStep = 1 }) {
+  return /* @__PURE__ */ jsxs3(MultiStepsContainer, { children: [
+    /* @__PURE__ */ jsx4(Label, { children: `Passo ${currentStep} de ${size}` }),
+    /* @__PURE__ */ jsx4(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ jsx4(Step, { active: currentStep >= step }, step);
+    }) })
+  ] });
+}
 export {
   Avatar2 as Avatar,
   Box,
   Button,
   Checkbox2 as Checkbox,
   Heading,
+  MultiSteps,
   Text,
   TextArea,
   TextInput
