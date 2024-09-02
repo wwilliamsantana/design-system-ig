@@ -7,6 +7,15 @@ export default {
   args: {
     children:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatibus, nulla reprehenderit quod cumque repudianda',
+    size: 'md',
+  },
+  argTypes: {
+    size: {
+      options: ['xs', 'sm', 'md', 'lg', '2xl', '3xl', '4xl', '5xl', '6xl'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
   },
 } as Meta<HeadingProps>
 
@@ -17,6 +26,7 @@ export const CustomTag: StoryObj<HeadingProps> = {
     children: 'Example title H1',
     as: 'h1',
   },
+
   parameters: {
     docs: {
       description: {
