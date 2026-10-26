@@ -1,68 +1,61 @@
 # Ignite UI — Design System
 
-Biblioteca de componentes React criada para promover consistência visual, reutilização de código e uma experiência de desenvolvimento mais organizada.
+O Ignite UI é uma biblioteca de componentes React desenvolvida com TypeScript, criada para oferecer componentes de interface reutilizáveis, consistência visual e centralização dos tokens de design.
 
-O projeto está estruturado como um monorepo e reúne componentes de interface, design tokens e documentação interativa com Storybook.
+O projeto utiliza uma arquitetura de monorepo, reunindo uma biblioteca de componentes React, um pacote de tokens de design e documentação interativa desenvolvida com Storybook.
 
-## ✨ Objetivos
+## Tecnologias
 
-- Construir componentes reutilizáveis para interfaces React.
-- Centralizar tokens de design e estilos.
-- Documentar e visualizar componentes de forma isolada.
-- Organizar pacotes compartilhados em um monorepo.
+- React 18
+- TypeScript
+- Stitches
+- Radix UI
+- Phosphor React
+- Storybook 8
+- Vite
+- Tsup
+- Turborepo
+- npm Workspaces
 
-## 🧰 Tecnologias
+## Componentes
 
-- **React 18**
-- **TypeScript**
-- **Stitches** — estilização de componentes
-- **Radix UI** — primitivas de interface
-- **Phosphor React** — ícones
-- **Storybook 8** — documentação e desenvolvimento visual
-- **Vite** — ambiente de desenvolvimento da documentação
-- **Tsup** — build dos pacotes
-- **Turborepo** — orquestração de tarefas do monorepo
-- **npm Workspaces** — gerenciamento dos pacotes
+A biblioteca inclui os seguintes componentes:
 
-## 📦 Estrutura do projeto
+- Box
+- Text
+- Heading
+- Avatar
+- Button
+- TextInput
+- TextArea
+- Checkbox
+- MultiSteps
 
-```text
-design-system-ig/
-├── packages/
-│   ├── docs/          # Documentação e Storybook
-│   ├── react/         # Componentes React
-│   ├── tokens/        # Design tokens
-│   ├── eslint-config/ # Configuração compartilhada do ESLint
-│   └── ts-config/     # Configurações compartilhadas do TypeScript
-├── package.json
-├── package-lock.json
-└── turbo.json
-```
+## Tokens de Design
 
-## 🧩 Componentes planejados
+O pacote `@ignite-ui/tokens` centraliza os fundamentos visuais utilizados pela biblioteca.
 
-A biblioteca está em desenvolvimento. A lista abaixo representa os componentes previstos no projeto:
+As categorias de tokens disponíveis incluem:
 
-- [ ] Text
-- [ ] Heading
-- [ ] Box
-- [ ] Button
-- [ ] TextInput
-- [ ] TextArea
-- [ ] Checkbox
-- [ ] Avatar
-- [ ] MultiStep
+- Cores
+- Tamanhos de fonte
+- Pesos de fonte
+- Famílias tipográficas
+- Alturas de linha
+- Raios de borda
+- Espaçamentos
 
-## 🚀 Como executar localmente
+
+## Instalação e Execução
 
 ### Pré-requisitos
 
-- [Node.js](https://nodejs.org/)
-- npm (o projeto utiliza npm Workspaces)
+- Node.js
+- npm
 
 ### Instalação
 
-Clone o repositório e entre na pasta:
+Clone o repositório e instale as dependências:
 
 ```bash
 git clone https://github.com/wwilliamsantana/design-system-ig.git
@@ -70,7 +63,7 @@ cd design-system-ig
 npm install
 ```
 
-### Ambiente de desenvolvimento
+### Desenvolvimento
 
 Para iniciar as tarefas de desenvolvimento configuradas no monorepo:
 
@@ -78,30 +71,27 @@ Para iniciar as tarefas de desenvolvimento configuradas no monorepo:
 npm run dev
 ```
 
-O Storybook está configurado para iniciar na porta **6006**. Quando o serviço estiver ativo, acesse [http://localhost:6006](http://localhost:6006).
+Para iniciar a documentação do Storybook separadamente:
+
+```bash
+cd packages/docs
+npm run dev
+```
+
+Por padrão, o Storybook utiliza a porta `6006`. Após iniciar o serviço, acesse [http://localhost:6006](http://localhost:6006) no navegador.
 
 ### Build
 
-Para executar as tarefas de build dos pacotes:
+Para gerar o build dos pacotes configurados no monorepo:
 
 ```bash
 npm run build
 ```
 
-## 🗺️ Próximos passos
+Para gerar o build da documentação do Storybook separadamente:
 
-- [ ] Desenvolver e refinar os componentes planejados.
-- [ ] Ampliar a documentação e os exemplos no Storybook.
-- [ ] Evoluir os design tokens e os padrões de estilo.
-- [ ] Melhorar os exemplos de uso e a experiência de integração.
+```bash
+cd packages/docs
+npm run build
+```
 
-## 👨‍💻 Autor
-
-**William Silva de Santana**
-
-- GitHub: [@wwilliamsantana](https://github.com/wwilliamsantana)
-- Portfólio: [portfolio-william-nu.vercel.app](https://portfolio-william-nu.vercel.app)
-
----
-
-Projeto desenvolvido para praticar e aplicar conceitos de componentização, design systems e organização de bibliotecas React.
